@@ -1,36 +1,25 @@
-# This is a basic workflow to help you get started with Actions
+print("사자성어 맞추기 게임을 시작합니다.")  #게임 시작 문구
+answer = ["오매불망","막역지우","등용문","입신양면","이효상효","형설지공",] # 답
+E=["자나깨나 잊지 못함",
+          "마음이 맞아 서로 거스르는 일이 없는, 생사를 같이할 수 있는 친밀한 벗",
+          "용문(龍門)에 오른다는 뜻으로, 출세의 관문을 이르는 말",
+          "사회적으로 인정받고 출세하여 이름을 세상에 드날림",
+          "효자가 죽은 부모를 너무 슬피 사모하여 병이 나고 혹은 죽음",
+          "가난을 이겨내며 반딧불과 눈빛으로 글을 읽어가며 고생 속에서 공부하여 이룬 공을 일컫는 말"] # 보기
 
-name: CI
+import  random
 
-# Controls when the action will run. 
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+i= random.randrange(E[i])
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+while True:
+    print(E[i])
+    a= input("이말의 사자성어는?")
+    if a == answer [i]:
+        print("정답입니다..\n게임을 종료합니다.")
+        break
+    elif a != answer[i]:
+        print("틀렸어요! 다시 도전!!")
+        continue
+    else:
+        print("게임을 종료합니다.")
+#
